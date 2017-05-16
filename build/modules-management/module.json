@@ -1,0 +1,11 @@
+{
+    "alias": "modules-management",
+    "name": "Management Module - KinCMS",
+    "author": "Nh\u1eadt Ph\u1ea1m",
+    "description": "Management Module - KinCMS",
+    "namespace": "App\\Build\\ModulesManagement",
+    "version": "1.0",
+    "autoload": "psr-4",
+    "enabled": true,
+    "installed": true
+}
