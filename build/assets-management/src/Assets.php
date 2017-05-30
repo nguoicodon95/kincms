@@ -30,9 +30,10 @@ class Assets
 
     public function addJs(array $js)
     {
+        $js_get_src = array_get($js, 'src');
         $this->js = array_unique(
             array_merge(
-                $this->js, $js
+                $this->js, $js_get_src
             )
         );
         return $this;
@@ -68,7 +69,7 @@ class Assets
                 config('asset-config.resources.fonts'),
                 $row
             );
-            $fontResourceUrl = $this->getResourceUrls($getRow);
+            $fontResourceUrl = array_get($getRow, 'src');
             foreach($fontResourceUrl as $resource) {
                 $data .= PHP_EOL . '<link rel="stylesheet" type="text/css" href="'.$resource.'">';
             }
@@ -99,17 +100,15 @@ class Assets
                 config('asset-config.resources.js'),
                 $row
             );
-            $fontResourceUrl = $this->getResourceUrls($getRow);
-            foreach($fontResourceUrl as $resource) {
-                $data .= PHP_EOL . '<script type="text/javascript" src="' . $row . '"></script>';
+            if(!$getRow == '')
+                $jsResourceUrl = array_get($getRow, 'src');
+            else 
+                $jsResourceUrl = [$row];
+            
+            foreach($jsResourceUrl as $resource) {
+                $data .= PHP_EOL . '<script type="text/javascript" src="' . $resource . '"></script>';
             }
         }
-        return $data;
-    }
-
-    public function getResourceUrls(array $resources)
-    {
-        $data = array_get($resources, 'src');
         return $data;
     }
 

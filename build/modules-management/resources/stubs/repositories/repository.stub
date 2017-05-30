@@ -1,11 +1,9 @@
 <?php namespace DummyNamespace;
 
-use WebEd\Base\Core\Repositories\AbstractBaseRepository;
-use WebEd\Base\Caching\Services\Contracts\CacheableContract;
-
+use App\Build\Base\Repositories\AbstractBaseRepository;
 use DummyNamespace\Contracts\DummyClassContract;
 
-class DummyClass extends AbstractBaseRepository implements DummyClassContract, CacheableContract
+class DummyClass extends AbstractBaseRepository implements DummyClassContract
 {
     protected $rules = [
 

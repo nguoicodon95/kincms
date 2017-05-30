@@ -43,7 +43,7 @@ class MakeModel extends AbstractGenerator
             $this->files->put($contractPath, $this->buildClass('Models\\' . $contractName));
         }
         
-        $this->info($this->type . ' tạo thành công.');
+        $this->info($this->type . ' được tạo thành công.');
     }
 
     protected function getStub()

@@ -25,7 +25,8 @@
             "App\\": "app/",
             "App\\Build\\Base\\": "build/base/src",
             "App\\Build\\ModulesManagement\\": "build/modules-management/src",
-            "App\\Build\\AssetsManagement\\": "build/assets-management/src"
+            "App\\Build\\AssetsManagement\\": "build/assets-management/src",
+            "App\\Build\\Pages\\": "build/pages/src"
         }
     },
     "autoload-dev": {

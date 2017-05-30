@@ -17,8 +17,8 @@ const { mix } = require('laravel-mix');
 const modulePath = './build/';
 
 // module Base
-mix.js(modulePath + '/base/resources/assets/js/app.js', 'public/modules/base/js')
-   .js( modulePath + '/base/resources/assets/js/theme.js', 'public/modules/base/js')
-   .js(modulePath + '/base/resources/assets/js/pages/dashboard.js', 'public/modules/base/js/pages')
-   .combine(modulePath + '/base/resources/assets/css/AdminLTE.css', 'public/modules/base/css/AdminLTE.css')
-   .combine(modulePath + '/base/resources/assets/css/skins/_all-skins.css', 'public/modules/base/css/skins/all-skins.css');
+mix.js(modulePath + '/base/resources/public/js/app.js', 'public/modules/base/js')
+   .js( modulePath + '/base/resources/public/js/theme.js', 'public/modules/base/js')
+   .js(modulePath + '/base/resources/public/js/pages/dashboard.js', 'public/modules/base/js/pages')
+   .combine(modulePath + '/base/resources/public/css/AdminLTE.css', 'public/modules/base/css/AdminLTE.css')
+   .combine(modulePath + '/base/resources/public/css/skins/_all-skins.css', 'public/modules/base/css/skins/all-skins.css');

@@ -4,23 +4,27 @@
         'default' => [
             'admin' => [
                 'js' => [
-                    'underscore',
+                    // 'underscore',
                     'jquery',
                     'bootstrap',
                     'fastclick',
-                    'jquery-cookie',
-                    'jquery-sortable',
-                    'modernizr',
-                    'bootstrap-hover-dropdown',
+                    // 'jquery-cookie',
+                    // 'jquery-sortable',
+                    // 'modernizr',
+                    // 'bootstrap-hover-dropdown',
                     'jquery-slimscroll',
-                    'jquery-blockui',
-                    'jquery-notific8',
-                    'bootstrap-confirmation',
-                    'jquery-validate',
-                    'bootstrap-tagsinput',
+                    // 'jquery-blockui',
+                    // 'jquery-notific8',
+                    // 'bootstrap-confirmation',
+                    // 'jquery-validate',
+                    // 'bootstrap-tagsinput',
+                    'theme',
+                    'app',
                 ],
                 'css' => [
                     'bootstrap',
+                    'AdminLTE',
+                    'skinCSS',
                     // 'jquery-notific8',
                     // 'bootstrap-tagsinput',
                 ],
@@ -48,7 +52,7 @@
                 */
                 'jquery' => [
                     'src' => [
-                        asset('admin/plugins/jquery.min.js')
+                        asset('admin/plugins/jQuery/jquery-2.2.3.min.js')
                     ]
                 ],
                 'jquery-cookie' => [
@@ -58,7 +62,7 @@
                 ],
                 'jquery-slimscroll' => [
                     'src' => [
-                        asset('admin/plugins/jquery-slimscroll/jquery.slimscroll.min.js')
+                        asset('admin/plugins/slimScroll/jquery.slimscroll.min.js')
                     ]
                 ],
                 'jquery-blockui' => [
@@ -121,7 +125,7 @@
                 ],
                 'fastclick' => [
                     'src' => [
-                        asset('admin/plugins/fastclick/fastclick.min.js')
+                        asset('admin/plugins/fastclick/fastclick.js')
                     ]
                 ],
                 /**
@@ -213,8 +217,35 @@
                         asset('admin/plugins/jvectormap/jquery-jvectormap-world-mill-en.js'),
                     ]
                 ],
+                'theme' => [
+                    'src' => [
+                        asset('modules/base/js/theme.js'),
+                    ]
+                ],
+                'app' => [
+                    'src' => [
+                        asset('modules/base/js/app.js'),
+                    ]
+                ],
             ],
             'css' => [
+                /**
+                * AdminLTE
+                */
+                'AdminLTE' => [
+                    'src' => [
+                        asset('modules/base/css/AdminLTE.css'),
+                    ]
+                ],
+
+                /**
+                * skin themes adminLte
+                */
+                'skinCSS' => [
+                    'src' => [
+                        asset('modules/base/css/skins/all-skins.css'),
+                    ]
+                ],
                 /**
                 * Jquery extensions
                 */

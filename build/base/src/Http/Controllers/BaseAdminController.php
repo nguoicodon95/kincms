@@ -5,6 +5,7 @@ use Assets;
 class BaseAdminController extends BaseController
 {
     protected $assets;
+    protected $data = [];
 
     public function __construct () {
         parent::__construct();
@@ -12,6 +13,9 @@ class BaseAdminController extends BaseController
     }
 
     public function view($viewName, $data = null) {
+        if(is_null($data))
+            $data = $this->data;
+            
         if(property_exists($this, 'module'))
             return view($this->module.'::'.$viewName, $data);
         
